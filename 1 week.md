@@ -1,4 +1,4 @@
-#1 week  tensorflow 기초 :octocat:
+#1 week  tensorflow 기초 :octocat: 
 ##Predicting values of x and y
 ### import library
 ~~~
