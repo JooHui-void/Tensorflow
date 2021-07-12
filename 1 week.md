@@ -44,11 +44,11 @@ model.compile(optimizer ='sgd',loss ='mean_squared_error')
 정확도는 낮다고 판단되지만 계산이 빠르다는 장점이 있다
 위의 중첩으로 미니 배치 경사 하강법이 있는데, 뒤에 batch_size= ''을 지정해주어서 사용한다
 - loss는 실제값과 예측값 사이의 평균 제곱 오차인 rms를 사용했다
-###Training model
+### Training model
 ~~~
 model.fit(xs,ys,epochs=500)
 ~~~
-###Predicting
+### Predicting
 이후에 x = 10일때 y값을 출력해본다면 
 ~~~
 print(model.predict([10.0]))
