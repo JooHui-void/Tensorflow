@@ -35,8 +35,20 @@ test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 
 print('\n테스트 정확도:', test_acc)  # 0.7983 나온다
 
-# plt.figure()
-# plt.show(train_images[0])
-# plt.colorbar()
-# plt.grid(False)
-# plt.show()
+predictions = model.predict(test_images)
+plt.subplot(1, 2, 1)
+plt.imshow(train_images[6])
+pre = class_names[np.argmax(predictions[6])]
+
+plt.title('prediction : ' + pre +', answer : '+ class_names[test_labels[6]])
+plt.subplot(1,2,2)
+# print(type(predictions[4]))
+
+x = np.arange(10)
+plt.bar(x, predictions[6])
+plt.xticks(x, class_names)
+plt.show()
+
+
+
+
